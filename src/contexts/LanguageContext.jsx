@@ -100,7 +100,7 @@ const translations = {
     tag_first: 'Phiên bản đầu tiên',
     tag_wip: 'Đang xây dựng',
     // Project Descriptions
-    desc_dragonfilm: 'Nền tảng xem phim trực tuyến tiếng Việt, tích hợp 3 API phim (KKPhim, OPhim, NguonC), hỗ trợ HLS streaming, lưu lịch sử xem và tiến độ tập phim.',
+    desc_dragonfilm: 'Nền tảng xem phim trực tuyến tiếng Việt, tích hợp 3 API phim, hỗ trợ HLS streaming, lưu lịch sử xem và tiến độ tập phim.',
     desc_xemvoilong: 'Dự án web xem phim tiền thân của DragonFilm — nơi mình bắt đầu học cách gọi API phim và xây dựng giao diện xem trực tuyến.',
     desc_polifort: 'Chính là website bạn đang xem! Portfolio cá nhân với thiết kế hiện đại, tinh tế, xây bằng React với kiến trúc feature-based.',
     // Skills
