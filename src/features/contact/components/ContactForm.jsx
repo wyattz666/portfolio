@@ -6,6 +6,7 @@ import { cn } from '../../../utils/cn';
 import styles from './ContactForm.module.css';
 
 export default function ContactForm() {
+  const { t } = useLanguage();
   const { values, errors, status, handleChange, submit } = useContactForm();
 
   return (
