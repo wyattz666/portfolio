@@ -60,7 +60,7 @@ export default function Footer() {
       </div>
 
       <p className={styles.copyright}>
-        © {new Date().getFullYear()} Portfolio · Made with 💗 tại Sài Gòn
+        © {new Date().getFullYear()} Portfolio · Made tại Sài Gòn
       </p>
     </footer>
   );

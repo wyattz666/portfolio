@@ -25,7 +25,7 @@ export default function Skills() {
     <section id="skills" className="section">
       <div className={`container ${styles.wrapper}`}>
         <SectionTitle
-          eyebrow="⭐ Bảng năng lực"
+          eyebrow="Bảng năng lực"
           title="Kỹ năng đang tu luyện"
           subtitle="Vẫn đang là sinh viên năm nhất, nhưng mình học bằng cách làm dự án thật mỗi ngày."
         />

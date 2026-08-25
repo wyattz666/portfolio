@@ -9,7 +9,7 @@ export default function Contact() {
       <div className={`container ${styles.grid}`}>
         <div>
           <SectionTitle
-            eyebrow="💌 Kết nối"
+            eyebrow="Kết nối"
             title="Cùng tạo nên điều gì đó thú vị?"
             subtitle="Dù là một dự án, một câu hỏi, hay chỉ đơn giản muốn chào hỏi — mình luôn sẵn sàng lắng nghe."
           />
@@ -21,13 +21,6 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <motion.span
-              className={styles.mascotEmoji}
-              animate={{ rotate: [0, -6, 6, 0] }}
-              transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              🦊
-            </motion.span>
             <p>
               "Đừng ngại nhắn cho mình nhé, mình phản hồi khá nhanh đó!"
             </p>

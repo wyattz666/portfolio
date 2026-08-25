@@ -51,7 +51,7 @@ export default function ContactForm() {
       </div>
 
       <Button type="submit" variant="primary" disabled={status === 'submitting'}>
-        {status === 'submitting' ? 'Đang gửi...' : 'Gửi lời nhắn 💌'}
+        {status === 'submitting' ? 'Đang gửi...' : 'Gửi lời nhắn'}
       </Button>
 
       <AnimatePresence>
@@ -62,7 +62,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
           >
-            🎉 Đã gửi thành công! Mình sẽ phản hồi sớm nhất có thể.
+            Đã gửi thành công! Mình sẽ phản hồi sớm nhất có thể.
           </motion.p>
         )}
       </AnimatePresence>

@@ -45,7 +45,7 @@ export default function Header() {
         </nav>
 
         <a href="#contact" className={styles.cta}>
-          Kết nối nào ✨
+          Kết nối nào
         </a>
 
         <button

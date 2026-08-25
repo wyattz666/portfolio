@@ -8,7 +8,7 @@ export default function Projects() {
     <section id="projects" className="section">
       <div className="container">
         <SectionTitle
-          eyebrow="🗺️ Nhật ký nhiệm vụ"
+          eyebrow="Nhật ký nhiệm vụ"
           title="Những dự án mình đã hoàn thành"
           subtitle="Từ những dòng code đầu tiên đến nền tảng đang được dùng thật — mỗi dự án là một chặng hành trình."
         />

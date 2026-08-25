@@ -20,7 +20,7 @@ export function useContactForm() {
 
   function validate() {
     const nextErrors = {};
-    if (!values.name.trim()) nextErrors.name = 'Bạn tên gì nhỉ? 🐾';
+    if (!values.name.trim()) nextErrors.name = 'Bạn tên gì nhỉ?';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
       nextErrors.email = 'Email này hình như chưa đúng định dạng.';
     }

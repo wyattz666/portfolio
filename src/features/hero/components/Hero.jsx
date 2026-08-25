@@ -28,7 +28,7 @@ export default function Hero() {
           animate="show"
         >
           <motion.span className="eyebrow" variants={item}>
-            🌸 Xin chào, mình là Long
+            Xin chào, mình là Long
           </motion.span>
 
           <motion.h1 className={styles.title} variants={item}>
@@ -41,7 +41,7 @@ export default function Hero() {
 
           <motion.div className={styles.actions} variants={item}>
             <Button as="a" href="#projects" variant="primary">
-              Xem dự án 🚀
+              Xem dự án
             </Button>
             <Button as="a" href="#contact" variant="secondary">
               Nói chuyện với mình
