@@ -53,7 +53,7 @@ export default function ContactForm() {
       </div>
 
       <Button type="submit" variant="primary" disabled={status === 'submitting'}>
-        {status === 'submitting' ? '{t("contact_btn_sending")}' : '{t("contact_btn_send")}'}
+        {status === 'submitting' ? t("contact_btn_sending") : t("contact_btn_send")}
       </Button>
 
       <AnimatePresence>
