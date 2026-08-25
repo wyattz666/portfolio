@@ -3,6 +3,8 @@ import Button from '../../../components/Button';
 import avatarImg from '../../../assets/images/avatar.jpg';
 import styles from './Hero.module.css';
 
+import Typewriter from '../../../components/Typewriter';
+
 const container = {
   hidden: {},
   show: {
@@ -31,8 +33,10 @@ export default function Hero() {
             Xin chào, mình là Long
           </motion.span>
 
-          <motion.h1 className={styles.title} variants={item}>
-            <span className="gradient-text">Full-stack Developer</span>
+          <motion.h1 className={styles.title} variants={item} style={{ minHeight: '1.2em' }}>
+            <span className="gradient-text">
+              <Typewriter words={['Full-stack Developer', 'AI Engineer']} />
+            </span>
           </motion.h1>
 
           <motion.p className={styles.subtitle} variants={item}>
