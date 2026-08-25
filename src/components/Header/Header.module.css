@@ -113,12 +113,17 @@
 }
 
 .mobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   overflow: hidden;
   background: rgba(255, 247, 251, 0.97);
   backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
   padding: 0 var(--sp-4);
+  box-shadow: 0 16px 32px rgba(184, 169, 255, 0.12);
 }
 
 .mobileNavLink {

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { cn } from '../../../utils/cn';
 import Button from '../../../components/Button';
 import avatarImg from '../../../assets/images/avatar.jpg';
 import styles from './Hero.module.css';
@@ -33,8 +34,8 @@ export default function Hero() {
             Xin chào, mình là Long
           </motion.span>
 
-          <motion.h1 className={styles.title} variants={item} style={{ minHeight: '1.2em' }}>
-            <span className="gradient-text">
+          <motion.h1 className={styles.title} variants={item}>
+            <span className={cn('gradient-text', styles.titleWrapper)}>
               <Typewriter words={['Full-stack Developer', 'AI Engineer']} />
             </span>
           </motion.h1>

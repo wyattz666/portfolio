@@ -22,6 +22,11 @@
   color: var(--color-ink);
 }
 
+.titleWrapper {
+  display: inline-block;
+  min-height: 2.6em; /* 2 lines for mobile */
+}
+
 .subtitle {
   margin-top: var(--sp-4);
   font-size: 1.15rem;
@@ -173,6 +178,12 @@
   .visual {
     height: 320px;
     order: -1;
+  }
+}
+
+@media (min-width: 901px) {
+  .titleWrapper {
+    min-height: 1.2em; /* 1 line for desktop */
   }
 }
 
