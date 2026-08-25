@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../../../contexts';
 import Button from '../../../components/Button';
 import { useContactForm } from '../hooks/useContactForm';
 import { cn } from '../../../utils/cn';
@@ -10,13 +11,13 @@ export default function ContactForm() {
   return (
     <form className={styles.form} onSubmit={submit} noValidate>
       <div className={styles.field}>
-        <label htmlFor="name">Tên của bạn</label>
+        <label htmlFor="name">{t("contact_label_name")}</label>
         <input
           id="name"
           name="name"
           value={values.name}
           onChange={handleChange}
-          placeholder="Nguyễn Văn A"
+          placeholder={t("contact_placeholder_name")}
           className={cn(styles.input, errors.name && styles.inputError)}
         />
         {errors.name && <span className={styles.errorText}>{errors.name}</span>}
@@ -37,21 +38,21 @@ export default function ContactForm() {
       </div>
 
       <div className={styles.field}>
-        <label htmlFor="message">Lời nhắn</label>
+        <label htmlFor="message">{t("contact_label_msg")}</label>
         <textarea
           id="message"
           name="message"
           rows={4}
           value={values.message}
           onChange={handleChange}
-          placeholder="Kể mình nghe ý tưởng của bạn nhé..."
+          placeholder={t("contact_placeholder_msg")}
           className={cn(styles.input, styles.textarea, errors.message && styles.inputError)}
         />
         {errors.message && <span className={styles.errorText}>{errors.message}</span>}
       </div>
 
       <Button type="submit" variant="primary" disabled={status === 'submitting'}>
-        {status === 'submitting' ? 'Đang gửi...' : 'Gửi lời nhắn'}
+        {status === 'submitting' ? '{t("contact_btn_sending")}' : '{t("contact_btn_send")}'}
       </Button>
 
       <AnimatePresence>
@@ -62,7 +63,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
           >
-            Đã gửi thành công! Mình sẽ phản hồi sớm nhất có thể.
+            {t("contact_success")}
           </motion.p>
         )}
       </AnimatePresence>

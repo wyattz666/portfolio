@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLanguage } from '../../../contexts';
 
 const initialValues = { name: '', email: '', message: '' };
 
@@ -8,6 +9,7 @@ const initialValues = { name: '', email: '', message: '' };
  * bằng lời gọi tới services/ khi có backend.
  */
 export function useContactForm() {
+  const { t } = useLanguage();
   const [values, setValues] = useState(initialValues);
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
   const [errors, setErrors] = useState({});
@@ -20,11 +22,11 @@ export function useContactForm() {
 
   function validate() {
     const nextErrors = {};
-    if (!values.name.trim()) nextErrors.name = 'Bạn tên gì nhỉ?';
+    if (!values.name.trim()) nextErrors.name = t('val_name');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-      nextErrors.email = 'Email này hình như chưa đúng định dạng.';
+      nextErrors.email = t('val_email');
     }
-    if (!values.message.trim()) nextErrors.message = 'Đừng để trống lời nhắn nhé!';
+    if (!values.message.trim()) nextErrors.message = t('val_msg');
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
   }

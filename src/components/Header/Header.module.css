@@ -72,6 +72,24 @@
   width: 100%;
 }
 
+.langToggle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(184, 169, 255, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  transition: all var(--dur-fast) var(--ease-soft);
+}
+
+.langToggle:hover {
+  color: var(--color-sakura-deep);
+  background: white;
+  border-color: var(--color-sakura);
+}
+
 .cta {
   font-family: var(--font-display);
   font-weight: 700;

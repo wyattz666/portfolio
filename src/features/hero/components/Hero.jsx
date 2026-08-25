@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../../contexts';
 import { cn } from '../../../utils/cn';
 import Button from '../../../components/Button';
 import avatarImg from '../../../assets/images/avatar.jpg';
@@ -21,6 +22,8 @@ const item = {
 const orbitIcons = ['reactjs', 'javascript', 'html5', 'css3'];
 
 export default function Hero() {
+
+  const { t } = useLanguage();
   return (
     <section id="top" className={styles.hero}>
       <div className={`container ${styles.grid}`}>
@@ -31,7 +34,7 @@ export default function Hero() {
           animate="show"
         >
           <motion.span className="eyebrow" variants={item}>
-            Xin chào, mình là Long
+            {t('hero_greeting')}
           </motion.span>
 
           <motion.h1 className={styles.title} variants={item}>
@@ -41,27 +44,27 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p className={styles.subtitle} variants={item}>
-            Mình là sinh viên ngành Công nghệ Thông tin tại ĐH Mở TP.HCM, có niềm đam mê xây dựng và triển khai các sản phẩm web thực tế. Từ nền tảng xem phim cá nhân đến những ý tưởng đang tiếp tục phát triển, mình luôn coi mỗi dự án là cơ hội để hoàn thiện kỹ năng và kể một câu chuyện công nghệ riêng.
+            {t('hero_subtitle')}
           </motion.p>
 
           <motion.div className={styles.actions} variants={item}>
             <Button as="a" href="#projects" variant="primary">
-              Xem dự án
+              {t('hero_btn_projects')}
             </Button>
             <Button as="a" href="#contact" variant="secondary">
-              Nói chuyện với mình
+              {t('hero_btn_talk')}
             </Button>
           </motion.div>
 
           <motion.div className={styles.stats} variants={item}>
             <div className={styles.stat}>
               <span className={styles.statNumber}>2024</span>
-              <span className={styles.statLabel}>Bắt đầu học IT</span>
+              <span className={styles.statLabel}>{t('hero_stat_1')}</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
               <span className={styles.statNumber}>3+</span>
-              <span className={styles.statLabel}>API tích hợp trong DragonFilm</span>
+              <span className={styles.statLabel}>{t('hero_stat_2')}</span>
             </div>
           </motion.div>
         </motion.div>
@@ -120,7 +123,7 @@ export default function Hero() {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <span>Cuộn xuống</span>
+        <span>{t('hero_scroll')}</span>
         <div className={styles.scrollLine} />
       </motion.div>
     </section>

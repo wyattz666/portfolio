@@ -1,16 +1,18 @@
 import SectionTitle from '../../../components/SectionTitle';
+import { useLanguage } from '../../../contexts';
 import ProjectCard from './ProjectCard';
 import { projects } from '../data/projects';
 import styles from './Projects.module.css';
 
 export default function Projects() {
+  const { t } = useLanguage();
   return (
     <section id="projects" className="section">
       <div className="container">
         <SectionTitle
-          eyebrow="Nhật ký nhiệm vụ"
-          title="Những dự án mình đã hoàn thành"
-          subtitle="Từ những dòng code đầu tiên đến nền tảng đang được dùng thật — mỗi dự án là một chặng hành trình."
+          eyebrow={t("proj_eyebrow")}
+          title={t("proj_title")}
+          subtitle={t("proj_subtitle")}
         />
 
         <div className={styles.grid}>

@@ -1,21 +1,24 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../../contexts';
 import SectionTitle from '../../../components/SectionTitle';
 import styles from './About.module.css';
 
-const facts = [
-  { icon: '', title: 'Đại Học Mở TP.HCM', desc: 'Sinh viên năm nhất ngành Công nghệ thông tin, bắt đầu từ 2024.' },
-  { icon: '', title: 'Đam mê điện ảnh', desc: 'Yêu thích phim ảnh và điện ảnh Việt Nam — nguồn cảm hứng cho nhiều dự án cá nhân.' },
-  { icon: '', title: 'Tự học, tự làm', desc: 'Xây dựng và triển khai các dự án web thực tế song song với việc học trên trường.' },
+const getFacts = (t) => [
+  { icon: '', title: t('about_fact1_title'), desc: t('about_fact1_desc') },
+  { icon: '', title: t('about_fact2_title'), desc: t('about_fact2_desc') },
+  { icon: '', title: t('about_fact3_title'), desc: t('about_fact3_desc') },
 ];
 
 export default function About() {
+  const { t } = useLanguage();
+  const facts = getFacts(t);
   return (
     <section id="about" className="section">
       <div className="container">
         <SectionTitle
-          eyebrow="Về mình"
-          title="Một dev nhỏ, ước mơ lớn"
-          subtitle="Mình thích biến những ý tưởng thành sản phẩm thật — chạy được, dùng được, và mang lại giá trị thực tế."
+          eyebrow={t("about_eyebrow")}
+          title={t("about_title")}
+          subtitle={t("about_subtitle")}
         />
 
         <div className={styles.factGrid}>

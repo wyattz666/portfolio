@@ -1,18 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../utils/cn';
+import { useLanguage } from '../../contexts';
 import styles from './Header.module.css';
-
-const navLinks = [
-  { label: 'Giới thiệu', href: '#about' },
-  { label: 'Dự án', href: '#projects' },
-  { label: 'Kỹ năng', href: '#skills' },
-  { label: 'Liên hệ', href: '#contact' },
-];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, toggleLang, t } = useLanguage();
+
+  const navLinks = [
+    { label: t('nav_about'), href: '#about' },
+    { label: t('nav_projects'), href: '#projects' },
+    { label: t('nav_skills'), href: '#skills' },
+    { label: t('nav_contact'), href: '#contact' },
+  ];
 
   useEffect(() => {
     function handleScroll() {
@@ -42,10 +44,17 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          <button 
+            className={styles.langToggle} 
+            onClick={toggleLang}
+            aria-label="Toggle language"
+          >
+            {lang === 'en' ? 'VI' : 'EN'}
+          </button>
         </nav>
 
         <a href="#contact" className={styles.cta}>
-          Kết nối nào
+          {t('nav_connect')}
         </a>
 
         <button
@@ -78,6 +87,16 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
+            <button
+              className={styles.mobileNavLink}
+              style={{ textAlign: 'left', color: 'var(--color-sakura-deep)' }}
+              onClick={() => {
+                toggleLang();
+                setMenuOpen(false);
+              }}
+            >
+              Ngôn ngữ / Language: {lang === 'en' ? 'EN' : 'VI'} ⟳
+            </button>
           </motion.nav>
         )}
       </AnimatePresence>

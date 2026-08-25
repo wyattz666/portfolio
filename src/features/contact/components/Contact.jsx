@@ -1,17 +1,19 @@
 import { motion } from 'framer-motion';
 import SectionTitle from '../../../components/SectionTitle';
+import { useLanguage } from '../../../contexts';
 import ContactForm from './ContactForm';
 import styles from './Contact.module.css';
 
 export default function Contact() {
+  const { t } = useLanguage();
   return (
     <section id="contact" className="section">
       <div className={`container ${styles.grid}`}>
         <div>
           <SectionTitle
-            eyebrow="Kết nối"
-            title="Cùng tạo nên điều gì đó thú vị?"
-            subtitle="Dù là một dự án, một câu hỏi, hay chỉ đơn giản muốn chào hỏi — mình luôn sẵn sàng lắng nghe."
+            eyebrow={t("contact_eyebrow")}
+            title={t("contact_title")}
+            subtitle={t("contact_subtitle")}
           />
 
           <motion.div
@@ -22,7 +24,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p>
-              "Đừng ngại nhắn cho mình nhé, mình phản hồi khá nhanh đó!"
+              {t("contact_note")}
             </p>
           </motion.div>
         </div>

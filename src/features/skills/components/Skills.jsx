@@ -1,4 +1,5 @@
 import SectionTitle from '../../../components/SectionTitle';
+import { useLanguage } from '../../../contexts';
 import SkillBar from './SkillBar';
 import styles from './Skills.module.css';
 
@@ -21,13 +22,14 @@ const skills = [
 ];
 
 export default function Skills() {
+  const { t } = useLanguage();
   return (
     <section id="skills" className="section">
       <div className={`container ${styles.wrapper}`}>
         <SectionTitle
-          eyebrow="Bảng năng lực"
-          title="Kỹ năng đang tu luyện"
-          subtitle="Vẫn đang là sinh viên năm nhất, nhưng mình học bằng cách làm dự án thật mỗi ngày."
+          eyebrow={t("skills_eyebrow")}
+          title={t("skills_title")}
+          subtitle={t("skills_subtitle")}
         />
 
         <div className={styles.panel}>

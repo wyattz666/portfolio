@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import { cn } from '../../../utils/cn';
 import styles from './ProjectCard.module.css';
+import { useLanguage } from '../../../contexts';
 
 /**
  * Thẻ dự án dạng "quest card" — mang tinh thần game:
  * mỗi dự án là một "nhiệm vụ" đã hoàn thành hoặc đang tiến hành.
  */
 export default function ProjectCard({ project, index }) {
+  const { t } = useLanguage();
   return (
     <motion.article
       className={cn(styles.card, styles[project.color])}
@@ -20,11 +22,11 @@ export default function ProjectCard({ project, index }) {
         <span className={styles.emoji}>
           <img src={`https://cdn.jsdelivr.net/gh/xandemon/developer-icons/icons/${project.iconName}.svg`} alt={project.iconName} width="24" height="24" />
         </span>
-        <span className={styles.tag}>{project.tag}</span>
+        <span className={styles.tag}>{t(project.tagKey)}</span>
       </div>
 
       <h3 className={styles.title}>{project.title}</h3>
-      <p className={styles.description}>{project.description}</p>
+      <p className={styles.description}>{t(project.descKey)}</p>
 
       <div className={styles.stack}>
         {project.stack.map((tech) => (

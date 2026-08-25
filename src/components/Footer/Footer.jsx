@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../contexts';
 import styles from './Footer.module.css';
 
 const getIconUrl = (name) => `https://cdn.jsdelivr.net/gh/xandemon/developer-icons/icons/${name}.svg`;
@@ -12,6 +13,7 @@ const socials = [
 ];
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className={styles.footer}>
       <div className={styles.wave} aria-hidden="true">
@@ -35,7 +37,7 @@ export default function Footer() {
           </motion.span>
           <div>
             <p className={styles.brandName}>Portfolio</p>
-            <p className={styles.tagline}>Portfolio của Long — code từ trái tim.</p>
+            <p className={styles.tagline}>{t('footer_tagline')}</p>
           </div>
         </div>
 
@@ -60,7 +62,7 @@ export default function Footer() {
       </div>
 
       <p className={styles.copyright}>
-        © {new Date().getFullYear()} Portfolio · Made tại Sài Gòn
+        © {new Date().getFullYear()} Portfolio · {t('footer_made')}
       </p>
     </footer>
   );
