@@ -15,7 +15,7 @@ export default function About() {
         <SectionTitle
           eyebrow="🍡 Về mình"
           title="Một dev nhỏ, ước mơ lớn"
-          subtitle="Mình thích biến những ý tưởng thành sản phẩm thật — chạy được, dùng được, và có chút hồn anime trong đó."
+          subtitle="Mình thích biến những ý tưởng thành sản phẩm thật — chạy được, dùng được, và mang lại giá trị thực tế."
         />
 
         <div className={styles.factGrid}>

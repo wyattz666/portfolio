@@ -34,7 +34,7 @@ export const projects = [
     title: 'Portfolio',
     tag: 'Đang xây dựng',
     description:
-      'Chính là website bạn đang xem! Portfolio cá nhân theo phong cách anime pastel, xây bằng React với kiến trúc feature-based.',
+      'Chính là website bạn đang xem! Portfolio cá nhân với thiết kế hiện đại, tinh tế, xây bằng React với kiến trúc feature-based.',
     stack: ['React', 'Vite', 'Framer Motion'],
     href: '#top',
     repo: 'https://github.com/wyattz666',

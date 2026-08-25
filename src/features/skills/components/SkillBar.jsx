@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styles from './SkillBar.module.css';
 
 /**
- * Thanh kỹ năng dạng "level bar" — mang cảm giác thanh EXP trong game/anime.
+ * Thanh kỹ năng dạng "level bar" — mang cảm giác thanh EXP trong game.
  */
 export default function SkillBar({ name, level, icon, index }) {
   return (

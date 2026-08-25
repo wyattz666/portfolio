@@ -3,7 +3,7 @@ import { cn } from '../../../utils/cn';
 import styles from './ProjectCard.module.css';
 
 /**
- * Thẻ dự án dạng "quest card" — mang tinh thần game/anime:
+ * Thẻ dự án dạng "quest card" — mang tinh thần game:
  * mỗi dự án là một "nhiệm vụ" đã hoàn thành hoặc đang tiến hành.
  */
 export default function ProjectCard({ project, index }) {

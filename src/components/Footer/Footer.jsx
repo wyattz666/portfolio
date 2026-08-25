@@ -35,7 +35,7 @@ export default function Footer() {
           </motion.span>
           <div>
             <p className={styles.brandName}>Portfolio</p>
-            <p className={styles.tagline}>Portfolio của Long — code từ trái tim, style anime.</p>
+            <p className={styles.tagline}>Portfolio của Long — code từ trái tim.</p>
           </div>
         </div>
 
