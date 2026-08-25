@@ -87,7 +87,9 @@ export default function Hero() {
               <img src={avatarImg} alt="Long" className={styles.avatarImage} />
             </div>
             <p className={styles.avatarName}>Long</p>
-            <p className={styles.avatarRole}>Full-stack Developer</p>
+            <p className={styles.avatarRole}>
+              <Typewriter words={['Full-stack Developer', 'AI Engineer']} />
+            </p>
           </motion.div>
 
           {orbitIcons.map((icon, i) => {
