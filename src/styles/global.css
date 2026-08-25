@@ -23,6 +23,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 img, svg {
@@ -97,6 +98,7 @@ h1, h2, h3, h4 {
 .section {
   padding: var(--sp-8) 0;
   position: relative;
+  scroll-margin-top: var(--header-h);
 }
 
 @media (max-width: 640px) {
