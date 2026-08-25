@@ -1,0 +1,139 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-h);
+  transition: background var(--dur-base) var(--ease-soft),
+    box-shadow var(--dur-base) var(--ease-soft), height var(--dur-base) var(--ease-soft);
+}
+
+.scrolled {
+  height: 68px;
+  background: rgba(255, 247, 251, 0.85);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px rgba(184, 169, 255, 0.15);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--color-ink);
+}
+
+.logoMark {
+  display: inline-flex;
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+}
+
+.navLink {
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  position: relative;
+  padding: 6px 0;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--grad-sakura);
+  transition: width var(--dur-fast) var(--ease-soft);
+}
+
+.navLink:hover {
+  color: var(--color-sakura-deep);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.cta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  background: var(--grad-sakura);
+  color: white;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-pop);
+  transition: transform var(--dur-fast) var(--ease-bounce);
+}
+
+.cta:hover {
+  transform: translateY(-2px) scale(1.04);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  width: 32px;
+  height: 24px;
+  justify-content: center;
+}
+
+.burgerLine {
+  height: 3px;
+  width: 100%;
+  background: var(--color-ink);
+  border-radius: var(--radius-pill);
+  transition: transform var(--dur-fast) var(--ease-soft), opacity var(--dur-fast);
+}
+
+.burgerLineOpen1 {
+  transform: translateY(4.5px) rotate(45deg);
+}
+
+.burgerLineOpen2 {
+  transform: translateY(-4.5px) rotate(-45deg);
+}
+
+.mobileNav {
+  overflow: hidden;
+  background: rgba(255, 247, 251, 0.97);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--sp-4);
+}
+
+.mobileNavLink {
+  padding: var(--sp-3) 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(184, 169, 255, 0.2);
+}
+
+@media (max-width: 860px) {
+  .nav,
+  .cta {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+}

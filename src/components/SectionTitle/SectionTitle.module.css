@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 640px;
+  margin-bottom: var(--sp-6);
+}
+
+.wrapper[data-align='center'] {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--fs-h1);
+  color: var(--color-ink);
+}
+
+.subtitle {
+  margin-top: var(--sp-2);
+  color: var(--color-ink-soft);
+  font-size: 1.05rem;
+}

@@ -1,0 +1,21 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.35;
+}
+
+.sparkle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, var(--color-honey) 60%, transparent 100%);
+  box-shadow: 0 0 8px rgba(255, 216, 107, 0.8);
+}

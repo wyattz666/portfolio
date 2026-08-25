@@ -1,0 +1,46 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-1);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 30px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  position: relative;
+}
+
+.primary {
+  background: var(--grad-sakura);
+  color: white;
+  box-shadow: var(--shadow-pop), var(--shadow-soft);
+}
+
+.secondary {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-pop), 0 2px 8px rgba(42, 33, 64, 0.08);
+  border: 2px solid var(--color-lavender);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-ink-soft);
+  padding: 10px 18px;
+}
+
+.ghost:hover {
+  color: var(--color-sakura-deep);
+}
+
+.icon {
+  display: inline-flex;
+  font-size: 1.1em;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+}

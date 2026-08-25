@@ -1,0 +1,63 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+
+.input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(184, 169, 255, 0.35);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  transition: border-color var(--dur-fast) var(--ease-soft),
+    box-shadow var(--dur-fast) var(--ease-soft);
+}
+
+.input::placeholder {
+  color: var(--color-ink-faint);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-sakura);
+  box-shadow: 0 0 0 4px rgba(255, 143, 171, 0.15);
+}
+
+.inputError {
+  border-color: var(--color-sakura-deep);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.errorText {
+  font-size: var(--fs-tiny);
+  color: var(--color-sakura-deep);
+  font-weight: 600;
+}
+
+.successMsg {
+  font-weight: 600;
+  color: var(--color-sky-deep);
+  background: rgba(142, 205, 221, 0.15);
+  padding: var(--sp-3);
+  border-radius: var(--radius-md);
+  text-align: center;
+}

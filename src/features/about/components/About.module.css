@@ -1,0 +1,36 @@
+.factGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+
+.factCard {
+  background: var(--grad-card);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-5);
+  box-shadow: var(--shadow-soft);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.factIcon {
+  font-size: 2.4rem;
+  display: inline-flex;
+  margin-bottom: var(--sp-3);
+}
+
+.factTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin-bottom: var(--sp-1);
+}
+
+.factDesc {
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 780px) {
+  .factGrid {
+    grid-template-columns: 1fr;
+  }
+}

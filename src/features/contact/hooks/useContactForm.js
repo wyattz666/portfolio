@@ -1,0 +1,48 @@
+import { useState } from 'react';
+
+const initialValues = { name: '', email: '', message: '' };
+
+/**
+ * Quản lý state + validate cơ bản cho form liên hệ.
+ * Hiện tại submit chỉ mô phỏng (chưa nối API thật) — thay hàm `submit`
+ * bằng lời gọi tới services/ khi có backend.
+ */
+export function useContactForm() {
+  const [values, setValues] = useState(initialValues);
+  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [errors, setErrors] = useState({});
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setValues((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: undefined }));
+  }
+
+  function validate() {
+    const nextErrors = {};
+    if (!values.name.trim()) nextErrors.name = 'Bạn tên gì nhỉ? 🐾';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+      nextErrors.email = 'Email này hình như chưa đúng định dạng.';
+    }
+    if (!values.message.trim()) nextErrors.message = 'Đừng để trống lời nhắn nhé!';
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
+  }
+
+  async function submit(e) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    setStatus('submitting');
+    try {
+      // TODO: nối vào services/ khi có API liên hệ thật
+      await new Promise((resolve) => setTimeout(resolve, 900));
+      setStatus('success');
+      setValues(initialValues);
+    } catch {
+      setStatus('error');
+    }
+  }
+
+  return { values, errors, status, handleChange, submit };
+}

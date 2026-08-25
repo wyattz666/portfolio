@@ -1,0 +1,17 @@
+.wrapper {
+  max-width: 780px;
+}
+
+.panel {
+  background: var(--grad-card);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  box-shadow: var(--shadow-soft);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 560px) {
+  .panel {
+    padding: var(--sp-4);
+  }
+}

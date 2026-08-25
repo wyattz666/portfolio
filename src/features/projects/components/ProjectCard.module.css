@@ -1,0 +1,108 @@
+.card {
+  position: relative;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-5);
+  box-shadow: var(--shadow-soft);
+  border: 3px solid transparent;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sakura { border-color: rgba(255, 143, 171, 0.4); }
+.sky { border-color: rgba(142, 205, 221, 0.5); }
+.lavender { border-color: rgba(184, 169, 255, 0.45); }
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-3);
+}
+
+.emoji {
+  font-size: 2.2rem;
+}
+
+.tag {
+  font-family: var(--font-display);
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  background: var(--color-bg-alt);
+  color: var(--color-sakura-deep);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.title {
+  font-size: 1.35rem;
+  margin-bottom: var(--sp-2);
+}
+
+.description {
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: var(--sp-4);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--sp-4);
+}
+
+.stackItem {
+  font-size: var(--fs-tiny);
+  font-weight: 600;
+  background: var(--color-bg-alt);
+  color: var(--color-ink-soft);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.primaryLink {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-sakura-deep);
+}
+
+.secondaryLink {
+  font-size: 0.9rem;
+  color: var(--color-ink-faint);
+  font-weight: 600;
+}
+
+.primaryLink:hover,
+.secondaryLink:hover {
+  text-decoration: underline;
+}
+
+.shine {
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 70%
+  );
+  transform: rotate(20deg);
+  pointer-events: none;
+  transition: left 0.7s var(--ease-soft);
+}
+
+.card:hover .shine {
+  left: 130%;
+}

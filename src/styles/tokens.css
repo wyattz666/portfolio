@@ -1,0 +1,95 @@
+/* ============================================
+   POLIFORT — Design Tokens
+   Pastel / Moe anime aesthetic
+   ============================================ */
+
+:root {
+  /* ---- Color: Base ---- */
+  --color-bg: #FFF7FB;
+  --color-bg-alt: #FDEFF6;
+  --color-surface: #FFFFFF;
+  --color-ink: #2A2140;
+  --color-ink-soft: #6B5C8A;
+  --color-ink-faint: #A79CC2;
+
+  /* ---- Color: Accents ---- */
+  --color-sakura: #FF8FAB;
+  --color-sakura-deep: #FF6B93;
+  --color-sky: #8ECDDD;
+  --color-sky-deep: #62B4C9;
+  --color-honey: #FFD86B;
+  --color-honey-deep: #FFC53D;
+  --color-lavender: #B8A9FF;
+  --color-lavender-deep: #9A85FF;
+  --color-mint: #A8E6CF;
+
+  /* ---- Color: Avatar signature ---- */
+  --mascot-hair: #A83E42;
+  --mascot-hair-light: #C25459;
+
+  /* ---- Gradients ---- */
+  --grad-hero: linear-gradient(135deg, #FFE3EE 0%, #F3E9FF 45%, #E3F6FA 100%);
+  --grad-sakura: linear-gradient(135deg, #FF8FAB 0%, #FFB4C6 100%);
+  --grad-sky: linear-gradient(135deg, #8ECDDD 0%, #B4E2EA 100%);
+  --grad-honey: linear-gradient(135deg, #FFD86B 0%, #FFE9A8 100%);
+  --grad-card: linear-gradient(160deg, #FFFFFF 0%, #FFF7FB 100%);
+
+  /* ---- Typography ---- */
+  --font-display: 'Baloo 2', 'Be Vietnam Pro', sans-serif;
+  --font-body: 'Be Vietnam Pro', 'Baloo 2', sans-serif;
+
+  --fs-hero: clamp(2.6rem, 6vw, 5rem);
+  --fs-h1: clamp(2.1rem, 4.2vw, 3.4rem);
+  --fs-h2: clamp(1.6rem, 3vw, 2.4rem);
+  --fs-h3: clamp(1.2rem, 2vw, 1.6rem);
+  --fs-body: clamp(1rem, 1.1vw, 1.125rem);
+  --fs-small: 0.875rem;
+  --fs-tiny: 0.75rem;
+
+  /* ---- Spacing (8px scale) ---- */
+  --sp-1: 0.5rem;
+  --sp-2: 0.75rem;
+  --sp-3: 1rem;
+  --sp-4: 1.5rem;
+  --sp-5: 2rem;
+  --sp-6: 3rem;
+  --sp-7: 4.5rem;
+  --sp-8: 6rem;
+  --sp-9: 9rem;
+
+  /* ---- Radius (soft, rounded moe shapes) ---- */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-blob: 42% 58% 65% 35% / 45% 40% 60% 55%;
+  --radius-pill: 999px;
+
+  /* ---- Shadow ---- */
+  --shadow-soft: 0 8px 24px rgba(255, 143, 171, 0.16);
+  --shadow-float: 0 16px 40px rgba(184, 169, 255, 0.22);
+  --shadow-pop: 0 4px 0 rgba(42, 33, 64, 0.12);
+  --shadow-inset-glow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+
+  /* ---- Motion ---- */
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-snap: cubic-bezier(0.5, 0, 0.1, 1);
+  --dur-fast: 0.2s;
+  --dur-base: 0.4s;
+  --dur-slow: 0.8s;
+
+  /* ---- Layout ---- */
+  --container-max: 1180px;
+  --header-h: 84px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
