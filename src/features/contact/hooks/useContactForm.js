@@ -8,6 +8,9 @@ const initialValues = { name: '', email: '', message: '' };
  * Hiện tại submit chỉ mô phỏng (chưa nối API thật) — thay hàm `submit`
  * bằng lời gọi tới services/ khi có backend.
  */
+const SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbzGQo5qj9Pza5jQTb9xHQajG2eSl0a2nrsqijoWZbnyRkCFfcTQ0TZpdTGjdf1Br-gn/exec';
+
 export function useContactForm() {
   const { t } = useLanguage();
   const [values, setValues] = useState(initialValues);
@@ -37,8 +40,14 @@ export function useContactForm() {
 
     setStatus('submitting');
     try {
-      // TODO: nối vào services/ khi có API liên hệ thật
-      await new Promise((resolve) => setTimeout(resolve, 900));
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(values),
+      });
       setStatus('success');
       setValues(initialValues);
     } catch {
